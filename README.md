@@ -22,9 +22,7 @@ Lien du tutoriel associé : [Installation et déploiement de Gophish avec un ten
 
 Le [fork du code source](https://github.com/PassAndSecure/GophishFR/releases/download/v0.12.1/gophishfr-v0.12.1-linux-64bit.zip) existant que j'ai développé est une version française de Gophish, avec quelques améliorations intégrées en plus de la francisation. [Gophish](https://getgophish.com/) est une plateforme open-source de phishing et de sensibilisation à la sécurité.
 
-![Campagne_GophishFR](https://github.com/PassAndSecure/GophishFR/blob/main/Picture/dashboard.jpg)
-
-![Dashboard_GophishFR](https://github.com/PassAndSecure/GophishFR/blob/main/Picture/campagne_page.PNG)
+![Dashboard_GophishFR](https://github.com/PassAndSecure/GophishFR/blob/main/Picture/campagne.PNG)
 
 Des templates à utiliser avec GophishFR sont fournis [ici](https://github.com/PassAndSecure/Template_Gophish/), ils sont personnalisés pour des campagnes de phishing se faisant passer pour des services Microsoft ou Google, ainsi que pour y remédier.
 
