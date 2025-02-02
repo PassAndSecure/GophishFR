@@ -7,6 +7,7 @@ echo "deb [trusted=yes] https://passandsecure.github.io/GophishFR/repo stable ma
 ```bash
 sudo apt update
 sudo apt install gophishfr
+sudo sed -i 's/^deb/#deb/' /etc/apt/sources.list.d/gophishfr.list
 ```
 [(Ne pas oublier l'ouverture des ports --> 80 / 443 / 3333)](https://passandsecure.fr/deploiement_campagne_phishing_gophish_tenant_M365_sur_debian_alma#ports)
 
