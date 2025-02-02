@@ -10,13 +10,6 @@ sudo apt install gophishfr
 ```
 [(Ne pas oublier l'ouverture des ports --> 80 / 443 / 3333)](https://passandsecure.fr/deploiement_campagne_phishing_gophish_tenant_M365_sur_debian_alma#ports)
 
-Je vous conseille de faire la dernière mise à jour : 
-```bash
-cd /var/lib/GophishFR
-sudo wget https://github.com/PassAndSecure/GophishFR/blob/main/apt_update_GophishFR.sh
-sudo chmod +x apt_update_GophishFR.sh
-sudo ./apt_update_GophishFR.sh
-```
 Puis lancer GophishFR :
 ```bash
 sudo systemctl start gophishfr
@@ -24,6 +17,14 @@ sudo systemctl enable gophishfr
 sudo systemctl status gophishfr
 ```
 Récupérer le mot de passe du compte admin dans le status de GophishFR
+
+Si besoin de faire la dernière mise à jour avec cette commande : 
+```bash
+cd /var/lib/GophishFR
+sudo wget https://github.com/PassAndSecure/GophishFR/blob/main/apt_update_GophishFR.sh
+sudo chmod +x apt_update_GophishFR.sh
+sudo ./apt_update_GophishFR.sh
+```
 
 Lien du tutoriel associé : [Installation et déploiement de Gophish avec un tenant M365 compatible Debian 12 / AlmaLinux 9.4](https://passandsecure.fr/deploiement_campagne_phishing_gophish_tenant_M365_sur_debian_alma)
 
