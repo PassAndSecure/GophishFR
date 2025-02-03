@@ -1,4 +1,4 @@
-![Dashboard_GophishFR](https://github.com/PassAndSecure/GophishFR/blob/main/Picture/gophish_purple.png)
+![Logo_GophishFR](https://github.com/PassAndSecure/GophishFR/blob/main/Picture/gophish_purple-1.png)
 
 # GophishFR
 
