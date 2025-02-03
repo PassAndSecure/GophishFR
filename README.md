@@ -1,4 +1,4 @@
-# Dépôt GophishFR par Kirua6 (Pass And Secure)
+# Dépôt GophishFR
 
 Installation avec apt possible, GophishFR sera installé dans `/var/lib`, `/usr/share/`, `/lib/systemd/system/` et un utilisateur dédié `gophishfr` sera créé : 
 ```bash
