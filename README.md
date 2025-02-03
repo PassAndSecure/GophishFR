@@ -1,4 +1,6 @@
-# Dépôt GophishFR
+![Dashboard_GophishFR](https://github.com/PassAndSecure/GophishFR/blob/main/Picture/gophish_purple.png)
+
+# GophishFR
 
 Installation avec apt possible, GophishFR sera installé dans `/var/lib`, `/usr/share/`, `/lib/systemd/system/` et un utilisateur dédié `gophishfr` sera créé : 
 ```bash
