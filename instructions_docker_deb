@@ -1,0 +1,77 @@
+📌 GophishFR
+
+GophishFR est une version française de Gophish, conçue pour la création et la gestion de campagnes de phishing éducatif.
+
+🚀 Comment utiliser cette image ?
+
+📥 Prérequis
+Avoir Docker installé
+Avoir Docker Compose si besoin
+
+🛠 Installation et Exécution
+
+1️⃣ Télécharger l’image
+docker pull gophishfr/gophishfr:latest
+
+2️⃣ Lancer GophishFR avec Docker
+docker run -d --name gophishfr \
+  -p 3333:3333 -p 8080:8080 \
+  gophishfr/gophishfr:latest
+
+🔹 Accéder à l’interface d’administration : https://ip_serveur:3333
+
+🔐 Identifiants par défaut :
+Utilisateur : admin
+Mot de passe récupérable dans les logs :
+docker logs gophishfr | grep "Please login with the username admin and the password"
+
+⚙️ Utilisation avec Docker Compose
+Créer un fichier docker-compose.yml avec le contenu suivant :
+
+services:
+  mariadb-gophishfr:
+    image: mariadb:latest
+    container_name: mariadb-gophishfr
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: gophish
+      MARIADB_USER: gophishfr_user
+      MARIADB_PASSWORD: gophishfr
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+  gophishfr:
+    build: .
+    container_name: gophishfr
+    restart: always
+    depends_on:
+      - mariadb-gophishfr
+    ports:
+      - "3333:3333"
+      - "8080:8080"
+    volumes:
+      - ./gophishfr:/opt/gophishfr
+    environment:
+      DB_NAME: mysql
+      DB_PATH: "gophish_user:gophishfr@(mariadb-gophish:3306)/gophish?charset=utf8&parseTime=True&loc=UTC"
+
+volumes:
+  mariadb_data:
+  gophish_data:
+
+Puis exécuter :
+docker-compose up -d
+
+🔄 Mise à jour
+docker pull gophishfr/gophishfr:latest
+docker-compose down
+docker-compose up -d
+
+🔥 À propos
+Repo officiel GophishFR : https://github.com/PassAndSecure/GophishFR
+Créateur de cette image : Van Ruymbeke Killian - Kirua6
+Licence : MIT
+Contact : gophishfr.project@passandsecure.fr
