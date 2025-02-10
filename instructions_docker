@@ -51,7 +51,7 @@ volumes:
   gophish_data:
 
 Puis exécuter :
-docker-compose up -d
+docker-compose build --no-cache
 
 🔹 Accéder à l’interface d’administration : https://ip_serveur:3333
 
