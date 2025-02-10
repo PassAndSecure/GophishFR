@@ -13,19 +13,7 @@ Avoir Docker Compose si besoin
 1️⃣ Télécharger l’image
 docker pull gophishfr/gophishfr:latest
 
-2️⃣ Lancer GophishFR avec Docker
-docker run -d --name gophishfr \
-  -p 3333:3333 -p 8080:8080 \
-  gophishfr/gophishfr:latest
-
-🔹 Accéder à l’interface d’administration : https://ip_serveur:3333
-
-🔐 Identifiants par défaut :
-Utilisateur : admin
-Mot de passe récupérable dans les logs :
-docker logs gophishfr | grep "Please login with the username admin and the password"
-
-⚙️ Utilisation avec Docker Compose
+2️⃣ Lancer GophishFR avec Docker Compose
 Créer un fichier docker-compose.yml avec le contenu suivant :
 
 services:
@@ -64,6 +52,13 @@ volumes:
 
 Puis exécuter :
 docker-compose up -d
+
+🔹 Accéder à l’interface d’administration : https://ip_serveur:3333
+
+🔐 Identifiants par défaut :
+Utilisateur : admin
+Mot de passe récupérable dans les logs :
+docker logs gophishfr | grep "Please login with the username admin and the password"
 
 🔄 Mise à jour
 docker pull gophishfr/gophishfr:latest
