@@ -16,6 +16,8 @@ docker pull gophishfr/gophishfr:latest
 2️⃣ Lancer GophishFR avec Docker Compose
 Créer un fichier docker-compose.yml avec le contenu suivant :
 
+sudo vi docker-compose.yml
+
 services:
   mariadb-gophishfr:
     image: mariadb:latest
