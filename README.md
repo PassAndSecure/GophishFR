@@ -2,7 +2,9 @@
 
 # GophishFR
 
-Installation avec apt possible, GophishFR sera installé dans `/var/lib`, `/usr/share/`, `/lib/systemd/system/` et un utilisateur dédié `gophishfr` sera créé : 
+[Installation avec Docker](https://github.com/PassAndSecure/GophishFR/blob/main/instructions_docker) - [Image Docker](https://hub.docker.com/r/gophishfr/gophishfr)
+
+Installation avec apt, GophishFR sera installé dans `/var/lib`, `/usr/share/`, `/lib/systemd/system/` et un utilisateur dédié `gophishfr` sera créé : 
 ```bash
 echo "deb [trusted=yes] https://passandsecure.github.io/GophishFR/repo stable main" | sudo tee /etc/apt/sources.list.d/gophishfr.list
 sudo apt update
