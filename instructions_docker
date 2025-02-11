@@ -34,7 +34,7 @@ services:
       - mariadb_data:/var/lib/mysql
 
   gophishfr:
-    build: .
+    build: gophishfr/gophishfr:latest
     container_name: gophishfr
     restart: always
     depends_on:
@@ -43,7 +43,7 @@ services:
       - "3333:3333"
       - "8080:8080"
     volumes:
-      - ./gophishfr:/opt/gophishfr
+      - gophish_data:/opt/gophishfr
     environment:
       DB_NAME: mysql
       DB_PATH: "gophishfr_user:gophishfr@(mariadb-gophishfr:3306)/gophish?charset=utf8&parseTime=True&loc=UTC"
