@@ -33,6 +33,11 @@ services:
       - "3306:3306"
     volumes:
       - mariadb_data:/var/lib/mysql
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   gophishfr:
     image: gophishfr/gophishfr:latest
@@ -48,6 +53,11 @@ services:
     environment:
       DB_NAME: mysql
       DB_PATH: "gophishfr_user:gophishfr@(mariadb-gophishfr:3306)/gophish?charset=utf8&parseTime=True&loc=UTC"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 volumes:
   mariadb_data:
