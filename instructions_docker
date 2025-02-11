@@ -5,8 +5,9 @@ GophishFR est une version française de Gophish, conçue pour la création et la
 🚀 Comment utiliser cette image ?
 
 📥 Prérequis
-Avoir Docker installé
-Avoir Docker Compose si besoin
+Avoir Docker et Compose installé
+sudo apt update && sudo apt install -y docker.io docker-compose
+sudo systemctl enable --now docker
 
 🛠 Installation et Exécution
 
@@ -34,7 +35,7 @@ services:
       - mariadb_data:/var/lib/mysql
 
   gophishfr:
-    build: gophishfr/gophishfr:latest
+    image: gophishfr/gophishfr:latest
     container_name: gophishfr
     restart: always
     depends_on:
@@ -53,7 +54,7 @@ volumes:
   gophish_data:
 
 Puis exécuter :
-docker-compose build --no-cache
+docker-compose up -d
 
 🔹 Accéder à l’interface d’administration : https://ip_serveur:3333
 
