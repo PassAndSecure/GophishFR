@@ -4,6 +4,8 @@
 
 Installation avec Docker [🐳](https://github.com/PassAndSecure/GophishFR/blob/main/instructions_docker) - Image Docker [📥](https://hub.docker.com/r/gophishfr/gophishfr)
 
+Lien du tutoriel Docker associé : [GophishFR & Docker : Installation rapide et test de phishing avec Microsoft 365](https://passandsecure.fr/deploiement_campagne_phishing_docker_gophishfr_tenant_M365)
+
 Installation avec apt, GophishFR sera installé dans `/var/lib`, `/usr/share/`, `/lib/systemd/system/` et un utilisateur dédié `gophishfr` sera créé : 
 ```bash
 echo "deb [trusted=yes] https://passandsecure.github.io/GophishFR/repo stable main" | sudo tee /etc/apt/sources.list.d/gophishfr.list
