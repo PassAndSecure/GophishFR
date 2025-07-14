@@ -23,7 +23,8 @@ sudo systemctl status gophishfr
 ```
 Récupérer le mot de passe du compte admin dans le status de GophishFR
 
-Lien du tutoriel associé : [Installation et déploiement de Gophish avec un tenant M365 compatible Debian 12 / AlmaLinux 9.4](https://passandsecure.fr/deploiement_campagne_phishing_gophish_tenant_M365_sur_debian_alma)
+Lien des tutoriels associés : [Installation de GophishFR avec M365 sur Debian 12 / AlmaLinux 9.4 ](https://passandsecure.fr/deploiement_campagne_phishing_gophishfr_tenant_M365_sur_debian_alma)
+[GophishFR & Docker, installation rapide et test de phishing avec Microsoft 365](https://passandsecure.fr/deploiement_campagne_phishing_docker_gophishfr_tenant_M365)
 
 Le [fork du code source](https://github.com/PassAndSecure/GophishFR/releases/download/v0.12.1/gophishfr-v0.12.1-linux-64bit.zip) existant que j'ai développé est une version française de Gophish, avec quelques améliorations intégrées en plus de la francisation. [Gophish](https://getgophish.com/) est une plateforme open-source de phishing et de sensibilisation à la sécurité.
 
